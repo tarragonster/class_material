@@ -1,0 +1,27 @@
+.nav-kan{
+  text-align: center;
+}
+
+.connectedSortable{
+  overflow: unset;
+}
+
+.title-card{
+  text-transform: uppercase;
+}
+
+.ui-state-highlight{
+  background: gray;
+  height: calc(1.5rem + 20px);
+}
+
+.dragging{
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.del-badge{
+  cursor: pointer;
+  float: right;
+}

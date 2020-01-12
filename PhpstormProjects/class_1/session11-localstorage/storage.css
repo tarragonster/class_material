@@ -1,0 +1,11 @@
+.outer-container .row{
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-component{
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}

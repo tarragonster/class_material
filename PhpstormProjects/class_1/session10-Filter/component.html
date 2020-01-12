@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<span id="ten"></span>
+<span id="tuoi"></span>
+
+<script type="text/javascript" src="../library/jquery.js"></script>
+<script type="text/javascript" src="session10.js"></script>
+
+<script>
+  // var ten = localStorage.getItem('ten');
+  // var tuoi = localStorage.getItem('tuoi');
+  //
+  // $('#ten').text(ten);
+  // $('#tuoi').text(tuoi);
+  var myObject = localStorage.getItem('user1');
+
+  var convertObject =  $.parseJSON(myObject)
+
+  console.log(convertObject.tuoi)
+</script>
+</body>
+</html>

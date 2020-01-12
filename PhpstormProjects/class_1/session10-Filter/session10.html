@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div class="toAppend1"></div>-->
+<!--<div class="toAppend2"></div>-->
+<!--<label for="">ten</label>-->
+<!--<input type="text" id="input1"><br>-->
+<!--<label for="">tuoi</label>-->
+<!--<input type="text" id="input2"><br>-->
+
+<!--<button type="button" onclick="saveToLocalStorage()">insert</button>-->
+
+<!--<span id="thisAge"></span>-->
+
+
+
+
+<script type="text/javascript" src="../library/jquery.js"></script>
+<script type="text/javascript" src="session10.js"></script>
+
+<script>
+
+    // function saveToLocalStorage(){
+    //     var input1 = $('#input1').val();
+    //     var input2 = $('#input2').val()
+    //
+    //     localStorage.setItem('ten',input1);
+    //     localStorage.setItem('tuoi',input2)
+    //
+    //     window.location.href = 'component.html';
+    // }
+
+  var User1 = {
+      ten: 'tung',
+      tuoi: '27'
+  }
+
+  var User2 ={
+      ten: 'hai',
+      tuoi: '30'
+  }
+
+  localStorage.setItem('user1', JSON.stringify(User1))
+
+</script>
+</body>
+</html>

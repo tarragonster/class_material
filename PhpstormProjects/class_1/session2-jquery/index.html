@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--  <span class="test">aaaaa</span>-->
+
+<!--  <select name="" id="" onchange="getValue(this)" style="width: 100px;">-->
+<!--    <option value="1">cam</option>-->
+<!--    <option value="2">quyt</option>-->
+<!--    <option value="3">buoi</option>-->
+<!--  </select>-->
+
+<!--<p onclick="clickToAppend(this)">Click me!</p>-->
+<!--<div id="thisDiv"></div>-->
+
+<!--<ul id="thisList"></ul>-->
+
+<p>This is my form</p>
+<form action="success.html" method="get" id="this_form">
+  <label for="first-name">First Name</label>
+  <input type="text" id="first-name" name="first_name" value=""><br>
+
+  <label for="last-name">Last Name</label>
+  <input type="text" id="last-name" name="last_name" value=""><br>
+
+  <select name="random_number" id="">
+    <option value="1">so mot</option>
+    <option value="2">so hai</option>
+  </select>
+  <hr>
+  <button type="button" onclick="submitRegister()">Submit</button>
+</form>
+
+
+</body>
+<script type="text/javascript" src="../library/jquery.js"></script>
+<script type="text/javascript" src="../library/jquery-validation.js"></script>
+<script type="text/javascript" src="session-jquery.js"></script>
+<script>
+    function getValue(event){
+        var value = $(event).val();
+        alert(value)
+    }
+
+    function clickToAppend(event) {
+        $('#thisDiv').append('<span>this is click</span><br>')
+    }
+
+    var profile = { "name": "Tung", "age": "27", 'relationship': "Single" };
+
+    $.each(profile, function (key,value) {
+        $('#thisList').append('<li>'+key+' is '+value+'</li>')
+    })
+
+    function submitRegister() {
+        $("#this_form").validate({
+            rules: {
+                first_name: {
+                    required: true,
+                },
+                last_name: {
+                    required: true,
+                },
+            },
+            // messages: {
+            //     first_name: {
+            //         required: "Email is invalid",
+            //     }
+            // }
+        });
+        let validatedata = $("#this_form").valid();
+        if(validatedata == true){
+            $("#this_form").submit()
+        }
+    }
+</script>
+
+
+</html>

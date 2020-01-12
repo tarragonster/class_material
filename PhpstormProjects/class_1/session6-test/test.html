@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script type="text/javascript" src="../library/jquery.js"></script>
+<script type="text/javascript" src="../library/jquery-validation.js"></script>
+<script type="text/javascript" src="../library/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<script>
+
+// TODO 1.Viết hàm chuyển đổi nhiệt độ từ độ C sang độ F, tham số truyền vào là 1 số nguyên biểu thị độ C. Ví dụ tham số truyền vào là -30 thì kết quả trả về là -22.
+
+function convertTemp(celcius){
+
+    var Fahrenheit = celcius*1.8 + 32
+
+    return Fahrenheit
+}
+
+// TODO 2.Cho 1 mảng có độ dài lớn hơn 2, chứa các số khác nhau. Hãy viết hàm tìm ra số lớn thứ nhì trong mảng.
+
+function max2(param1,param2){
+    if(param1 > param2){
+        return param1
+    }else{
+        return param2
+    }
+}
+
+var array = [27,3,34,12,6,3]
+
+function getHighestFromArray() {
+
+    var maxItem = array[0];
+    for(var i=1; i < array.length; i++){
+        maxItem = max2(maxItem, array[i])
+    }
+
+    newArray = array.filter(function (value) {
+        return value < maxItem
+    });
+
+    var result = getSecondBestItem(newArray)
+
+    return result
+}
+
+function getSecondBestItem(newArray) {
+
+    var maxSecond = newArray[0];
+    for(var i=1; i < newArray.length; i++){
+        maxSecond = max2(maxSecond, newArray[i])
+    }
+
+    return maxSecond
+}
+
+// TODO 3 Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất.
+
+var stringArray =['haimuoi','moichin19','aaa','abcd']
+
+function longestString() {
+
+    var maxString = stringArray[0]
+    for(var i = 1; i < stringArray.length; i++){
+      if(maxString.length < stringArray[i].length){
+          maxString = stringArray[i]
+      }
+    }
+
+    return maxString
+}
+
+// TODO 4 Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết thúc bởi chuỗi target hay không. Kết quả trả về là true hoặc false
+
+function StringEndWithTarget(string,target) {
+  var n = string.endsWith(target)
+
+    return n
+}
+
+// TODO 5 Cho 1 mảng chỉ chứa các phần tử có kiểu dữ liệu number, string và boolean. Hãy kiểm tra xem trong mảng đó có phần tử nào bị lặp lại hay không (xuất hiện 2 lần trở lên). Kết quả trả về true (nếu lặp) hoặc false (nếu không lặp).
+
+var dupArray = ['asdf', 23, true, false, 23]
+
+function checkDuplicates() {
+
+    for(var i = 0; i < dupArray.length; i++){
+        for(var j = i; j < dupArray.length; j++) {
+            if(i != j && dupArray[i] == dupArray[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+</script>
+</body>
+</html>
